@@ -1,0 +1,15 @@
+[package]
+name = "track-a"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "track-a"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"
